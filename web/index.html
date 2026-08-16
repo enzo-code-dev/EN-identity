@@ -1,0 +1,119 @@
+<!--
+███████╗███╗   ██╗███████╗ ██████╗      ██████╗ ██████╗ ██████╗ ███████╗
+██╔════╝████╗  ██║╚══███╔╝██╔═══██╗    ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+█████╗  ██╔██╗ ██║  ███╔╝ ██║   ██║    ██║     ██║   ██║██║  ██║█████╗
+██╔══╝  ██║╚██╗██║ ███╔╝  ██║   ██║    ██║     ██║   ██║██║  ██║██╔══╝
+███████╗██║ ╚████║███████╗╚██████╔╝    ╚██████╗╚██████╔╝██████╔╝███████╗
+╚══════╝╚═╝  ╚═══╝╚══════╝ ╚═════╝      ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
+
+               DISCORD • https://discord.gg/HPEAWNB52w
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ENZO CODE">
+    <title>ENZO CODE | Identity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="identity" class="identity" aria-hidden="true">
+        <section class="shell" role="dialog" aria-modal="true" aria-labelledby="identity-title">
+            <aside class="brand-panel">
+                <div class="brand-top">
+                    <div class="brand-mark" aria-hidden="true"><span></span></div>
+                    <p class="eyebrow">ENZO CODE</p>
+                </div>
+
+                <div class="brand-copy">
+                    <h1 id="identity-title" class="brand-title" data-text="ENZO CODE">ENZO CODE</h1>
+                    <div class="brand-line" aria-hidden="true"><span></span></div>
+                    <p class="brand-description">Character registration made for a clean and simple server experience.</p>
+                </div>
+
+                <div class="brand-footer">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span>CREATED BY ENZO CODE</span>
+                </div>
+            </aside>
+
+            <section class="form-panel">
+                <header class="form-header">
+                    <div>
+                        <p class="section-kicker">ENZO CODE IDENTITY</p>
+                        <h2>Create character</h2>
+                    </div>
+                    <span class="step">01</span>
+                </header>
+
+                <form id="identity-form" novalidate autocomplete="off">
+                    <div class="field-row">
+                        <label class="field" for="firstname">
+                            <span class="field-label">First name</span>
+                            <span class="input-wrap">
+                                <input id="firstname" name="firstname" type="text" inputmode="text" placeholder="Michael" spellcheck="false">
+                                <span class="input-line" aria-hidden="true"></span>
+                            </span>
+                        </label>
+
+                        <label class="field" for="lastname">
+                            <span class="field-label">Last name</span>
+                            <span class="input-wrap">
+                                <input id="lastname" name="lastname" type="text" inputmode="text" placeholder="Morgan" spellcheck="false">
+                                <span class="input-line" aria-hidden="true"></span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="field-row">
+                        <label class="field" for="dateofbirth">
+                            <span class="field-label">Date of birth</span>
+                            <span class="input-wrap">
+                                <input id="dateofbirth" name="dateofbirth" type="date">
+                                <span class="input-line" aria-hidden="true"></span>
+                            </span>
+                        </label>
+
+                        <label class="field" for="height">
+                            <span class="field-label">Height</span>
+                            <span class="input-wrap has-suffix">
+                                <input id="height" name="height" type="number" inputmode="numeric" placeholder="180">
+                                <span class="suffix">CM</span>
+                                <span class="input-line" aria-hidden="true"></span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <fieldset class="gender-field">
+                        <legend>Gender</legend>
+                        <div class="gender-options">
+                            <label class="gender-option">
+                                <input type="radio" name="sex" value="m" checked>
+                                <span>Male</span>
+                            </label>
+                            <label class="gender-option">
+                                <input type="radio" name="sex" value="f">
+                                <span>Female</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+
+                    <button id="submit-button" class="submit-button" type="submit">
+                        <span class="button-label">CREATE CHARACTER</span>
+                        <span class="button-arrow" aria-hidden="true">→</span>
+                        <span class="button-loader" aria-hidden="true"></span>
+                    </button>
+                </form>
+
+                <p class="form-note">ENZO CODE • IDENTITY SYSTEM</p>
+            </section>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
