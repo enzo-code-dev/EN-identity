@@ -1,40 +1,33 @@
 <div align="center">
-![EN-identity Preview](images/preview.png)
+
 # EN-identity
 
-**Clean dark-red identity registration UI for FiveM / ESX**
+FiveM identity registration for ESX with a custom dark-red NUI.
 
-**Customized & maintained by ENZO CODE**
+**ENZO CODE**
 
-[Discord](https://discord.gg/HPEAWNB52w) · GPL-3.0
+[Discord](https://discord.gg/HPEAWNB52w)
 
 </div>
 
----
-
-## About
-
-`EN-identity` is a customized ESX identity registration resource with a dedicated NUI interface. The UI uses a minimal dark-red design and keeps the standard ESX identity flow and compatibility where required.
-
-The resource folder name must stay exactly `EN-identity`. A server-side startup check stops the resource if the folder is renamed.
+![EN-identity Preview](images/preview.png)
 
 ## Features
 
-- Custom dark-red NUI registration interface
-- ENZO CODE startup console banner
-- Resource-name validation for `EN-identity`
-- First name and last name validation
-- Date of birth validation
-- Height validation
+- Custom identity registration UI
+- Dark-red theme
+- First name and last name checks
+- Date of birth checks
+- Height checks
 - Gender selection
-- ESX player identity integration
-- ESX multichar compatibility
+- ESX identity support
+- ESX multichar support
 - Character deletion support
-- Test command for opening the registration UI
+- Startup console banner
+- Resource name lock
+- Test command for the UI
 
 ## Requirements
-
-Make sure these resources are installed and started before `EN-identity`:
 
 - `es_extended`
 - `esx_skin`
@@ -42,98 +35,72 @@ Make sure these resources are installed and started before `EN-identity`:
 
 ## Installation
 
-1. Download or clone this repository.
-2. Put the `EN-identity` folder inside your FiveM resources directory.
-3. Do **not** rename the resource folder.
-4. Make sure the required ESX resources and `oxmysql` start before it.
-5. Add the following line to your `server.cfg`:
+1. Put the `EN-identity` folder in your resources folder.
+2. Keep the folder name exactly `EN-identity`.
+3. Make sure the required resources start before this one.
+4. Add this to `server.cfg`:
 
 ```cfg
 ensure EN-identity
 ```
 
-6. Keep the custom NUI mode enabled by using:
+5. Keep this option disabled in `config.lua`:
 
 ```lua
 Config.UseDeferrals = false
 ```
 
-7. Restart the server or start the resource.
+6. Restart the server.
 
 ## Test Command
 
-To manually open the identity UI for testing, use:
+Open the UI in game:
 
 ```text
 /testidentity
 ```
 
-From the F8 console you can use:
+You can also run this from F8:
 
 ```text
 testidentity
 ```
 
-The server still validates identity registration, so an already registered player cannot register a second identity through the normal callback.
+## Config
 
-## Configuration
-
-Main settings are available in `config.lua`, including:
+The main settings are in `config.lua`:
 
 - Locale
-- Name length limits
+- First and last name limits
 - Minimum and maximum height
 - Date format
-- Lowest and highest birth year
-- Character deletion settings
+- Birth year range
+- Character deletion
 - Deferral mode
 
-## Resource Name Lock
+## Resource Name
 
-The resource must be named:
+The resource name must stay:
 
 ```text
 EN-identity
 ```
 
-If the folder/resource name is changed, the server console prints an ENZO CODE error and stops the incorrectly named resource.
+If the folder is renamed, the resource prints an error in the server console and stops.
 
-## Project Structure
+## Preview
+
+Put your screenshot here:
 
 ```text
-EN-identity/
-├── client/
-│   └── main.lua
-├── locales/
-├── server/
-│   └── main.lua
-├── web/
-│   ├── app.js
-│   ├── index.html
-│   └── styles.css
-├── config.lua
-├── EN-identity.sql
-├── fxmanifest.lua
-├── LICENSE
-├── NOTICE.md
-└── README.md
+images/preview.png
 ```
 
 ## Support
 
-For updates and support:
-
 **ENZO CODE**  
-**Discord:** https://discord.gg/HPEAWNB52w
+Discord: https://discord.gg/HPEAWNB52w
 
 ## License
 
-This project is distributed under the **GNU General Public License v3.0 (GPL-3.0)**. See `LICENSE` for the full license text and `NOTICE.md` for information about this modified release.
-
----
-
-<div align="center">
-
-**ENZO CODE**
-
-</div>
+This resource is released under GPL-3.0. Check `LICENSE` and `NOTICE.md` for the license details.
